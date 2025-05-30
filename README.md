@@ -14,6 +14,7 @@ pro registraci na server enceladus.
 - Vytvořte v Zabbbix GUI Appliance auto-registracni pravidlo na základě HostMetadata=SPOS - (Hostgroup, Tag, Template).
 - Upravte instalační a konfigurační scripty tak, aby jste nainstalovali Zabbix agent2 verze 7.0 LTS a nastavili konfiguraci pro auto-registraci agenta na váš Zabbix server (již existující Zabbix Appliance s Alma Linux).
 - Výsledný registrovaný host s unikátním jmenem vložte jako Screenshot do adresáře Images.
+- Upravte Ubuntu/README.md tak, aby informace v něm odpovídaly upravám ve scriptech.
 
 # Nápověda
 
