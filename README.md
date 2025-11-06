@@ -1,24 +1,28 @@
 # zbx7-auto-reg
 
-The independent work - Vagrant and Zabbix Agent2 7.0 LTS - Auto-registration to Appliance
+The independent work - Vagrant and Zabbix Agent2 7.0 LTS - Auto-registration to
+[Zabbix pfSense](https://enceladus.pfsense.cz)
 
-# Zabbix Appliance monitoring Ubuntu by Agent2
+# Zabbix pfSense monitoring - Linux distribution by Agent2
 
-V adresáři Ubuntu máte připraven Vagrantfile z prvního pololetí se scripty
-pro registraci na server enceladus.
+Pomocí Vagrant si vytvořte server s libovolnou Linux distribucí. Instalujte
+na nej  Zabbix Agent2 a upravte konfiguraci tak, aby se tento host
+automaticky registroval na privátní - [Zabbix pfSense](https://enceladus.pfsense.cz).
+
+![Ubuntu Zabbix Agent2](./Images/osy-Ubuntu-ZabbixAgent2.webp)
 
 ## Požadované známkované úkoly
 
-- Použijte svůj Zabbix server - Zabbix aplliance, kde máte z minuleho zadání funkční interní síť 192.168.1.0/24
-- Upravte Vagrantfile tak, aby se Vám vytvořil virtuální server, který bude mít druhou síťovou kartu a nastavte na ni IPv4 adresu 192.168.1.3 - intnet
-- Vytvořte v Zabbbix GUI Appliance auto-registracni pravidlo na základě HostMetadata=SPOS - (Hostgroup, Tag, Template).
-- Upravte instalační a konfigurační scripty tak, aby jste nainstalovali Zabbix agent2 verze 7.0 LTS a nastavili konfiguraci pro auto-registraci agenta na váš Zabbix server (již existující Zabbix Appliance s Alma Linux).
-- Výsledný registrovaný host s unikátním jmenem vložte jako Screenshot do adresáře Images.
-- Upravte Ubuntu/README.md tak, aby informace v něm odpovídaly upravám ve scriptech.
+- Přihlašte se na Zabbix server Enceladus pod účtem spos a ověřte kolik hostů je monitorováno v tomto zabbixu.
+- Vytvořte si adresář s konfigurací, která zajistí deploy Vámi zvolené Linuxové distribuce pomocí Vagrant.
+- Vytvořte instalační a konfigurační scripty tak, aby jste nainstalovali Zabbix agent2 verze 7.0 LTS do VM a nastavili konfiguraci agenta pro auto-registraci na Zabbix server enceladus.pfsense.cz. Akce na Enceladu má nastavenu takovou podmínku (Host metadata contains SPOS)
+- Výsledný Váš registrovaný host s unikátním jmenem vložte jako Screenshot do adresáře Images.
+- Svého registrovaného hosta vyexportuje v libovolném formátu YAML, XML nebo JSON jako soubor a vložte do Vašeho projektu.
+- Upravte README.md tak, aby obsohovalo informace o Vašich změnách v tomto zadání.
 
 # Nápověda
 
-- Zabbix [Version 7.0 LTS - repo](https://www.zabbix.com/download?zabbix=7.0&os_distribution=ubuntu&os_version=22.04&components=agent_2&db=&ws=)
-- Vagrant [virtualbox internal network](https://developer.hashicorp.com/vagrant/docs/providers/virtualbox/networking#virtualbox-internal-network)
+- Zabbix 7.0 LTS [auto-registration](https://www.zabbix.com/documentation/7.0/en/manual/discovery/auto_registration)
+- [Vagrant examples](https://github.com/sposdknl/2025-sposdk-osy/tree/main/Vagrant)
 
 ...
